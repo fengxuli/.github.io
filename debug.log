@@ -1,0 +1,29 @@
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Writing database to /Users/john/hexo/github/db.json","time":"2018-12-30T07:21:20.011Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Hexo version: \u001b[35m3.8.0\u001b[39m","time":"2018-12-30T07:21:20.028Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Working directory: \u001b[35m~/hexo/github/\u001b[39m","time":"2018-12-30T07:21:20.029Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Config loaded: \u001b[35m~/hexo/github/_config.yml\u001b[39m","time":"2018-12-30T07:21:20.200Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-category\u001b[39m","time":"2018-12-30T07:21:20.226Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-index\u001b[39m","time":"2018-12-30T07:21:20.229Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-marked\u001b[39m","time":"2018-12-30T07:21:20.236Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-stylus\u001b[39m","time":"2018-12-30T07:21:20.237Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-deployer-git\u001b[39m","time":"2018-12-30T07:21:20.271Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-archive\u001b[39m","time":"2018-12-30T07:21:20.274Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-tag\u001b[39m","time":"2018-12-30T07:21:20.276Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-ejs\u001b[39m","time":"2018-12-30T07:21:20.281Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-wordcount\u001b[39m","time":"2018-12-30T07:21:20.281Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-server\u001b[39m","time":"2018-12-30T07:21:20.371Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/filters/after_post_render/exturl.js\u001b[39m","time":"2018-12-30T07:21:20.377Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/merge-configs.js\u001b[39m","time":"2018-12-30T07:21:20.380Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/helpers/engine.js\u001b[39m","time":"2018-12-30T07:21:20.381Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/helpers/next-url.js\u001b[39m","time":"2018-12-30T07:21:20.381Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/center-quote.js\u001b[39m","time":"2018-12-30T07:21:20.381Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/exturl.js\u001b[39m","time":"2018-12-30T07:21:20.382Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/full-image.js\u001b[39m","time":"2018-12-30T07:21:20.382Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/group-pictures.js\u001b[39m","time":"2018-12-30T07:21:20.382Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/button.js\u001b[39m","time":"2018-12-30T07:21:20.383Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/include-raw.js\u001b[39m","time":"2018-12-30T07:21:20.383Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/note.js\u001b[39m","time":"2018-12-30T07:21:20.383Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/label.js\u001b[39m","time":"2018-12-30T07:21:20.383Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/tabs.js\u001b[39m","time":"2018-12-30T07:21:20.384Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/merge.js\u001b[39m","time":"2018-12-30T07:21:20.386Z","v":0}
+{"name":"hexo","hostname":"John.local","pid":34769,"level":20,"msg":"Database saved","time":"2018-12-30T07:21:20.389Z","v":0}
