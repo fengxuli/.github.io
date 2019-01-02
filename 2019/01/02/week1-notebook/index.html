@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Applied Data Science with Python: week1_notebook">
+<meta name="keywords" content="Coursera,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="week1_notebook">
+<meta property="og:url" content="http://yoursite.com/2019/01/02/week1-notebook/index.html">
+<meta property="og:site_name" content="John&#39;s Blog">
+<meta property="og:description" content="Applied Data Science with Python: week1_notebook">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Xp8yUly1fysbcjur4tj31hc0u0qc9">
+<meta property="og:updated_time" content="2019-01-02T08:21:47.254Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="week1_notebook">
+<meta name="twitter:description" content="Applied Data Science with Python: week1_notebook">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005Xp8yUly1fysbcjur4tj31hc0u0qc9">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/02/week1-notebook/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>week1_notebook | John's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">John's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/02/week1-notebook/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="John's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">week1_notebook
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-02 03:09:06 / Modified: 03:21:47" itemprop="dateCreated datePublished" datetime="2019-01-02T03:09:06-05:00">2019-01-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/02/week1-notebook/" class="leancloud_visitors" data-flag-title="week1_notebook">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Applied Data Science with Python: week1_notebook</p>
+<a id="more"></a>
+<h1 id="The-Python-Programming-Language-Functions"><a href="#The-Python-Programming-Language-Functions" class="headerlink" title="The Python Programming Language: Functions"></a>The Python Programming Language: Functions</h1><p><br><br><code>add_numbers</code> is a function that takes two numbers and adds them together.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_numbers</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">add_numbers(<span class="number">1</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><p><br><br><code>add_numbers</code> updated to take an optional 3rd parameter. Using <code>print</code> allows printing of multiple expressions within a single cell.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_numbers</span><span class="params">(x,y,z=None)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> (z==<span class="keyword">None</span>):</span><br><span class="line">        <span class="keyword">return</span> x+y</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> x+y+z</span><br><span class="line"></span><br><span class="line">print(add_numbers(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">print(add_numbers(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>3
+6
+</code></pre><p><br><br><code>add_numbers</code> updated to take an optional flag parameter.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_numbers</span><span class="params">(x, y, z=None, flag=False)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> (flag):</span><br><span class="line">        print(<span class="string">'Flag is true!'</span>)</span><br><span class="line">    <span class="keyword">if</span> (z==<span class="keyword">None</span>):</span><br><span class="line">        <span class="keyword">return</span> x + y</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> x + y + z</span><br><span class="line">    </span><br><span class="line">print(add_numbers(<span class="number">1</span>, <span class="number">2</span>, flag=<span class="keyword">True</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>Flag is true!
+3
+</code></pre><p><br><br>Assign function <code>add_numbers</code> to variable <code>a</code>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_numbers</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br><span class="line"></span><br><span class="line">a = add_numbers</span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><p><br></p>
+<h1 id="The-Python-Programming-Language-Types-and-Sequences"><a href="#The-Python-Programming-Language-Types-and-Sequences" class="headerlink" title="The Python Programming Language: Types and Sequences"></a>The Python Programming Language: Types and Sequences</h1><p><br><br>Use <code>type</code> to return the object’s type.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(<span class="string">'This is a string'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>str
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(<span class="keyword">None</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>NoneType
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>int
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>float
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(add_numbers)</span><br></pre></td></tr></table></figure>
+<pre><code>function
+</code></pre><p><br><br>Tuples are an immutable data structure (cannot be altered).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = (<span class="number">1</span>, <span class="string">'a'</span>, <span class="number">2</span>, <span class="string">'b'</span>)</span><br><span class="line">type(x)</span><br></pre></td></tr></table></figure>
+<pre><code>tuple
+</code></pre><p><br><br>Lists are a mutable data structure.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="string">'a'</span>, <span class="number">2</span>, <span class="string">'b'</span>]</span><br><span class="line">type(x)</span><br></pre></td></tr></table></figure>
+<pre><code>list
+</code></pre><p><br><br>Use <code>append</code> to append an object to a list.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x.append(<span class="number">3.3</span>)</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+<pre><code>[1, &#39;a&#39;, 2, &#39;b&#39;, 3.3]
+</code></pre><p><br><br>This is an example of how to loop through each item in the list.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> x:</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
+<pre><code>1
+a
+2
+b
+3.3
+</code></pre><p><br><br>Or using the indexing operator:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span>( i != len(x) ):</span><br><span class="line">    print(x[i])</span><br><span class="line">    i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<pre><code>1
+a
+2
+b
+3.3
+</code></pre><p><br><br>Use <code>+</code> to concatenate lists.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>] + [<span class="number">3</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>[1, 2, 3, 4]
+</code></pre><p><br><br>Use <code>*</code> to repeat lists.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>]*<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<pre><code>[1, 1, 1]
+</code></pre><p><br><br>Use the <code>in</code> operator to check if something is inside a list.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>True
+</code></pre><p><br><br>Now let’s look at strings. Use bracket notation to slice a string.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'This is a string'</span></span><br><span class="line">print(x[<span class="number">0</span>]) <span class="comment">#first character</span></span><br><span class="line">print(x[<span class="number">0</span>:<span class="number">1</span>]) <span class="comment">#first character, but we have explicitly set the end character</span></span><br><span class="line">print(x[<span class="number">0</span>:<span class="number">2</span>]) <span class="comment">#first two characters</span></span><br></pre></td></tr></table></figure>
+<pre><code>T
+T
+Th
+</code></pre><p><br><br>This will return the last element of the string.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>&#39;g&#39;
+</code></pre><p><br><br>This will return the slice starting from the 4th element from the end and stopping before the 2nd element from the end.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">-4</span>:<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>&#39;ri&#39;
+</code></pre><p><br><br>This is a slice from the beginning of the string and stopping before the 3rd element.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>&#39;Thi&#39;
+</code></pre><p><br><br>And this is a slice starting from the 4th element of the string and going all the way to the end.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">firstname = <span class="string">'Christopher'</span></span><br><span class="line">lastname = <span class="string">'Brooks'</span></span><br><span class="line"></span><br><span class="line">print(firstname + <span class="string">' '</span> + lastname)</span><br><span class="line">print(firstname*<span class="number">3</span>)</span><br><span class="line">print(<span class="string">'Chris'</span> <span class="keyword">in</span> firstname)</span><br></pre></td></tr></table></figure>
+<pre><code>Christopher Brooks
+ChristopherChristopherChristopher
+True
+</code></pre><p><br><br><code>split</code> returns a list of all the words in a string, or a list split on a specific character.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firstname = <span class="string">'Christopher Arthur Hansen Brooks'</span>.split(<span class="string">' '</span>)[<span class="number">0</span>] <span class="comment"># [0] selects the first element of the list</span></span><br><span class="line">lastname = <span class="string">'Christopher Arthur Hansen Brooks'</span>.split(<span class="string">' '</span>)[<span class="number">-1</span>] <span class="comment"># [-1] selects the last element of the list</span></span><br><span class="line">print(firstname)</span><br><span class="line">print(lastname)</span><br></pre></td></tr></table></figure>
+<pre><code>Christopher
+Brooks
+</code></pre><p><br><br>Make sure you convert objects to strings before concatenating.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Chris'</span> + <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-25-1623ac76de6e&gt; in &lt;module&gt;()
+----&gt; 1 &#39;Chris&#39; + 2
+
+
+TypeError: must be str, not int
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Chris'</span> + str(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>&#39;Chris2&#39;
+</code></pre><p><br><br>Dictionaries associate keys with values.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = &#123;<span class="string">'Christopher Brooks'</span>: <span class="string">'brooksch@umich.edu'</span>, <span class="string">'Bill Gates'</span>: <span class="string">'billg@microsoft.com'</span>&#125;</span><br><span class="line">x[<span class="string">'Christopher Brooks'</span>] <span class="comment"># Retrieve a value by using the indexing operator</span></span><br></pre></td></tr></table></figure>
+<pre><code>&#39;brooksch@umich.edu&#39;
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="string">'Kevyn Collins-Thompson'</span>] = <span class="keyword">None</span></span><br><span class="line">x[<span class="string">'Kevyn Collins-Thompson'</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>Iterate over all of the keys:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> x:</span><br><span class="line">    print(x[name])</span><br></pre></td></tr></table></figure>
+<pre><code>brooksch@umich.edu
+billg@microsoft.com
+None
+</code></pre><p><br><br>Iterate over all of the values:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> email <span class="keyword">in</span> x.values():</span><br><span class="line">    print(email)</span><br></pre></td></tr></table></figure>
+<pre><code>brooksch@umich.edu
+billg@microsoft.com
+None
+</code></pre><p><br><br>Iterate over all of the items in the list:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name, email <span class="keyword">in</span> x.items():</span><br><span class="line">    print(name)</span><br><span class="line">    print(email)</span><br></pre></td></tr></table></figure>
+<pre><code>Christopher Brooks
+brooksch@umich.edu
+Bill Gates
+billg@microsoft.com
+Kevyn Collins-Thompson
+None
+</code></pre><p><br><br>You can unpack a sequence into different variables:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = (<span class="string">'Christopher'</span>, <span class="string">'Brooks'</span>, <span class="string">'brooksch@umich.edu'</span>)</span><br><span class="line">fname, lname, email = x</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fname</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lname</span><br></pre></td></tr></table></figure>
+<p><br><br>Make sure the number of values you are unpacking matches the number of variables being assigned.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = (<span class="string">'Christopher'</span>, <span class="string">'Brooks'</span>, <span class="string">'brooksch@umich.edu'</span>, <span class="string">'Ann Arbor'</span>)</span><br><span class="line">fname, lname, email = x</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="The-Python-Programming-Language-More-on-Strings"><a href="#The-Python-Programming-Language-More-on-Strings" class="headerlink" title="The Python Programming Language: More on Strings"></a>The Python Programming Language: More on Strings</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'Chris'</span> + <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'Chris'</span> + str(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p><br><br>Python has a built in method for convenient string formatting.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sales_record = &#123;</span><br><span class="line"><span class="string">'price'</span>: <span class="number">3.24</span>,</span><br><span class="line"><span class="string">'num_items'</span>: <span class="number">4</span>,</span><br><span class="line"><span class="string">'person'</span>: <span class="string">'Chris'</span>&#125;</span><br><span class="line"></span><br><span class="line">sales_statement = <span class="string">'&#123;&#125; bought &#123;&#125; item(s) at a price of &#123;&#125; each for a total of &#123;&#125;'</span></span><br><span class="line"></span><br><span class="line">print(sales_statement.format(sales_record[<span class="string">'person'</span>],</span><br><span class="line">                             sales_record[<span class="string">'num_items'</span>],</span><br><span class="line">                             sales_record[<span class="string">'price'</span>],</span><br><span class="line">                             sales_record[<span class="string">'num_items'</span>]*sales_record[<span class="string">'price'</span>]))</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="Reading-and-Writing-CSV-files"><a href="#Reading-and-Writing-CSV-files" class="headerlink" title="Reading and Writing CSV files"></a>Reading and Writing CSV files</h1><p><br><br>Let’s import our datafile mpg.csv, which contains fuel economy data for 234 cars.</p>
+<ul>
+<li>mpg : miles per gallon</li>
+<li>class : car classification</li>
+<li>cty : city mpg</li>
+<li>cyl : # of cylinders</li>
+<li>displ : engine displacement in liters</li>
+<li>drv : f = front-wheel drive, r = rear wheel drive, 4 = 4wd</li>
+<li>fl : fuel (e = ethanol E85, d = diesel, r = regular, p = premium, c = CNG)</li>
+<li>hwy : highway mpg</li>
+<li>manufacturer : automobile manufacturer</li>
+<li>model : model of car</li>
+<li>trans : type of transmission</li>
+<li>year : model year</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line">%precision <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'mpg.csv'</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    mpg = list(csv.DictReader(csvfile))</span><br><span class="line">    </span><br><span class="line">mpg[:<span class="number">3</span>] <span class="comment"># The first three dictionaries in our list.</span></span><br></pre></td></tr></table></figure>
+<p><br><br><code>csv.Dictreader</code> has read in each row of our csv file as a dictionary. <code>len</code> shows that our list is comprised of 234 dictionaries.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len(mpg)</span><br></pre></td></tr></table></figure>
+<p><br><br><code>keys</code> gives us the column names of our csv.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mpg[<span class="number">0</span>].keys()</span><br></pre></td></tr></table></figure>
+<p><br><br>This is how to find the average cty fuel economy across all cars. All values in the dictionaries are strings, so we need to convert to float.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum(float(d[<span class="string">'cty'</span>]) <span class="keyword">for</span> d <span class="keyword">in</span> mpg) / len(mpg)</span><br></pre></td></tr></table></figure>
+<p><br><br>Similarly this is how to find the average hwy fuel economy across all cars.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum(float(d[<span class="string">'hwy'</span>]) <span class="keyword">for</span> d <span class="keyword">in</span> mpg) / len(mpg)</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>set</code> to return the unique values for the number of cylinders the cars in our dataset have.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cylinders = set(d[<span class="string">'cyl'</span>] <span class="keyword">for</span> d <span class="keyword">in</span> mpg)</span><br><span class="line">cylinders</span><br></pre></td></tr></table></figure>
+<p><br><br>Here’s a more complex example where we are grouping the cars by number of cylinder, and finding the average cty mpg for each group.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CtyMpgByCyl = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> cylinders: <span class="comment"># iterate over all the cylinder levels</span></span><br><span class="line">    summpg = <span class="number">0</span></span><br><span class="line">    cyltypecount = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> d <span class="keyword">in</span> mpg: <span class="comment"># iterate over all dictionaries</span></span><br><span class="line">        <span class="keyword">if</span> d[<span class="string">'cyl'</span>] == c: <span class="comment"># if the cylinder level type matches,</span></span><br><span class="line">            summpg += float(d[<span class="string">'cty'</span>]) <span class="comment"># add the cty mpg</span></span><br><span class="line">            cyltypecount += <span class="number">1</span> <span class="comment"># increment the count</span></span><br><span class="line">    CtyMpgByCyl.append((c, summpg / cyltypecount)) <span class="comment"># append the tuple ('cylinder', 'avg mpg')</span></span><br><span class="line"></span><br><span class="line">CtyMpgByCyl.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>])</span><br><span class="line">CtyMpgByCyl</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>set</code> to return the unique values for the class types in our dataset.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vehicleclass = set(d[<span class="string">'class'</span>] <span class="keyword">for</span> d <span class="keyword">in</span> mpg) <span class="comment"># what are the class types</span></span><br><span class="line">vehicleclass</span><br></pre></td></tr></table></figure>
+<p><br><br>And here’s an example of how to find the average hwy mpg for each class of vehicle in our dataset.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">HwyMpgByClass = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> vehicleclass: <span class="comment"># iterate over all the vehicle classes</span></span><br><span class="line">    summpg = <span class="number">0</span></span><br><span class="line">    vclasscount = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> d <span class="keyword">in</span> mpg: <span class="comment"># iterate over all dictionaries</span></span><br><span class="line">        <span class="keyword">if</span> d[<span class="string">'class'</span>] == t: <span class="comment"># if the cylinder amount type matches,</span></span><br><span class="line">            summpg += float(d[<span class="string">'hwy'</span>]) <span class="comment"># add the hwy mpg</span></span><br><span class="line">            vclasscount += <span class="number">1</span> <span class="comment"># increment the count</span></span><br><span class="line">    HwyMpgByClass.append((t, summpg / vclasscount)) <span class="comment"># append the tuple ('class', 'avg mpg')</span></span><br><span class="line"></span><br><span class="line">HwyMpgByClass.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line">HwyMpgByClass</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="The-Python-Programming-Language-Dates-and-Times"><a href="#The-Python-Programming-Language-Dates-and-Times" class="headerlink" title="The Python Programming Language: Dates and Times"></a>The Python Programming Language: Dates and Times</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime <span class="keyword">as</span> dt</span><br><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> tm</span><br></pre></td></tr></table></figure>
+<p><br><br><code>time</code> returns the current time in seconds since the Epoch. (January 1st, 1970)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tm.time()</span><br></pre></td></tr></table></figure>
+<p><br><br>Convert the timestamp to datetime.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dtnow = dt.datetime.fromtimestamp(tm.time())</span><br><span class="line">dtnow</span><br></pre></td></tr></table></figure>
+<p><br><br>Handy datetime attributes:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dtnow.year, dtnow.month, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second <span class="comment"># get year, month, day, etc.from a datetime</span></span><br></pre></td></tr></table></figure>
+<p><br><br><code>timedelta</code> is a duration expressing the difference between two dates.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">delta = dt.timedelta(days = <span class="number">100</span>) <span class="comment"># create a timedelta of 100 days</span></span><br><span class="line">delta</span><br></pre></td></tr></table></figure>
+<p><br><br><code>date.today</code> returns the current local date.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">today = dt.date.today()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">today - delta <span class="comment"># the date 100 days ago</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">today &gt; today-delta <span class="comment"># compare dates</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="The-Python-Programming-Language-Objects-and-map"><a href="#The-Python-Programming-Language-Objects-and-map" class="headerlink" title="The Python Programming Language: Objects and map()"></a>The Python Programming Language: Objects and map()</h1><p><br><br>An example of a class in python:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>:</span></span><br><span class="line">    department = <span class="string">'School of Information'</span> <span class="comment">#a class variable</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_name</span><span class="params">(self, new_name)</span>:</span> <span class="comment">#a method</span></span><br><span class="line">        self.name = new_name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_location</span><span class="params">(self, new_location)</span>:</span></span><br><span class="line">        self.location = new_location</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">person = Person()</span><br><span class="line">person.set_name(<span class="string">'Christopher Brooks'</span>)</span><br><span class="line">person.set_location(<span class="string">'Ann Arbor, MI, USA'</span>)</span><br><span class="line">print(<span class="string">'&#123;&#125; live in &#123;&#125; and works in the department &#123;&#125;'</span>.format(person.name, person.location, person.department))</span><br></pre></td></tr></table></figure>
+<p><br><br>Here’s an example of mapping the <code>min</code> function between two lists.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">store1 = [<span class="number">10.00</span>, <span class="number">11.00</span>, <span class="number">12.34</span>, <span class="number">2.34</span>]</span><br><span class="line">store2 = [<span class="number">9.00</span>, <span class="number">11.10</span>, <span class="number">12.34</span>, <span class="number">2.01</span>]</span><br><span class="line">cheapest = map(min, store1, store2)</span><br><span class="line">cheapest</span><br></pre></td></tr></table></figure>
+<p><br><br>Now let’s iterate through the map object to see the values.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> cheapest:</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="The-Python-Programming-Language-Lambda-and-List-Comprehensions"><a href="#The-Python-Programming-Language-Lambda-and-List-Comprehensions" class="headerlink" title="The Python Programming Language: Lambda and List Comprehensions"></a>The Python Programming Language: Lambda and List Comprehensions</h1><p><br><br>Here’s an example of lambda that takes in three parameters and adds the first two.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_function = <span class="keyword">lambda</span> a, b, c : a + b</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_function(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p><br><br>Let’s iterate from 0 to 999 and return the even numbers.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">my_list = []</span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">1000</span>):</span><br><span class="line">    <span class="keyword">if</span> number % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        my_list.append(number)</span><br><span class="line">my_list</span><br></pre></td></tr></table></figure>
+<p><br><br>Now the same thing but with list comprehension.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_list = [number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">1000</span>) <span class="keyword">if</span> number % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">my_list</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="The-Python-Programming-Language-Numerical-Python-NumPy"><a href="#The-Python-Programming-Language-Numerical-Python-NumPy" class="headerlink" title="The Python Programming Language: Numerical Python (NumPy)"></a>The Python Programming Language: Numerical Python (NumPy)</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Creating-Arrays"><a href="#Creating-Arrays" class="headerlink" title="Creating Arrays"></a>Creating Arrays</h2><p>Create a list and convert it to a numpy array</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mylist = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">x = np.array(mylist)</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
+<p><br><br>Or just pass in a list directly</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y = np.array([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">y</span><br></pre></td></tr></table></figure>
+<p><br><br>Pass in a list of lists to create a multidimensional array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m = np.array([[<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>], [<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]])</span><br><span class="line">m</span><br></pre></td></tr></table></figure>
+<p><br><br>Use the shape method to find the dimensions of the array. (rows, columns)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m.shape</span><br></pre></td></tr></table></figure>
+<p><br><br><code>arange</code> returns evenly spaced values within a given interval.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n = np.arange(<span class="number">0</span>, <span class="number">30</span>, <span class="number">2</span>) <span class="comment"># start at 0 count up by 2, stop before 30</span></span><br><span class="line">n</span><br></pre></td></tr></table></figure>
+<p><br><br><code>reshape</code> returns an array with the same data with a new shape.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n = n.reshape(<span class="number">3</span>, <span class="number">5</span>) <span class="comment"># reshape array to be 3x5</span></span><br><span class="line">n</span><br></pre></td></tr></table></figure>
+<p><br><br><code>linspace</code> returns evenly spaced numbers over a specified interval.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">o = np.linspace(<span class="number">0</span>, <span class="number">4</span>, <span class="number">9</span>) <span class="comment"># return 9 evenly spaced values from 0 to 4</span></span><br><span class="line">o</span><br></pre></td></tr></table></figure>
+<p><br><br><code>resize</code> changes the shape and size of array in-place.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">o.resize(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">o</span><br></pre></td></tr></table></figure>
+<p><br><br><code>ones</code> returns a new array of given shape and type, filled with ones.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">3</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p><br><br><code>zeros</code> returns a new array of given shape and type, filled with zeros.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((<span class="number">2</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p><br><br><code>eye</code> returns a 2-D array with ones on the diagonal and zeros elsewhere.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p><br><br><code>diag</code> extracts a diagonal or constructs a diagonal array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.diag(y)</span><br></pre></td></tr></table></figure>
+<p><br><br>Create an array using repeating list (or see <code>np.tile</code>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] * <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p><br><br>Repeat elements of an array using <code>repeat</code>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.repeat([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="Combining-Arrays"><a href="#Combining-Arrays" class="headerlink" title="Combining Arrays"></a>Combining Arrays</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p = np.ones([<span class="number">2</span>, <span class="number">3</span>], int)</span><br><span class="line">p</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>vstack</code> to stack arrays in sequence vertically (row wise).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vstack([p, <span class="number">2</span>*p])</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>hstack</code> to stack arrays in sequence horizontally (column wise).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.hstack([p, <span class="number">2</span>*p])</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Operations"><a href="#Operations" class="headerlink" title="Operations"></a>Operations</h2><p>Use <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and <code>**</code> to perform element wise addition, subtraction, multiplication, division and power.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x + y) <span class="comment"># elementwise addition     [1 2 3] + [4 5 6] = [5  7  9]</span></span><br><span class="line">print(x - y) <span class="comment"># elementwise subtraction  [1 2 3] - [4 5 6] = [-3 -3 -3]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x * y) <span class="comment"># elementwise multiplication  [1 2 3] * [4 5 6] = [4  10  18]</span></span><br><span class="line">print(x / y) <span class="comment"># elementwise divison         [1 2 3] / [4 5 6] = [0.25  0.4  0.5]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x**<span class="number">2</span>) <span class="comment"># elementwise power  [1 2 3] ^2 =  [1 4 9]</span></span><br></pre></td></tr></table></figure>
+<p><br><br><strong>Dot Product:</strong>  </p>
+<p>$ \begin{bmatrix}x_1 \ x_2 \ x_3\end{bmatrix}<br>\cdot<br>\begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix}<br>= x_1 y_1 + x_2 y_2 + x_3 y_3$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.dot(y) <span class="comment"># dot product  1*4 + 2*5 + 3*6</span></span><br></pre></td></tr></table></figure>
+<pre><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-1-14817228fd9d&gt; in &lt;module&gt;()
+----&gt; 1 x.dot(y) # dot product  1*4 + 2*5 + 3*6
+
+
+NameError: name &#39;x&#39; is not defined
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = np.array([y, y**<span class="number">2</span>])</span><br><span class="line">print(len(z)) <span class="comment"># number of rows of array</span></span><br></pre></td></tr></table></figure>
+<p><br><br>Let’s look at transposing arrays. Transposing permutes the dimensions of the array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = np.array([y, y**<span class="number">2</span>])</span><br><span class="line">z</span><br></pre></td></tr></table></figure>
+<p><br><br>The shape of array <code>z</code> is <code>(2,3)</code> before transposing.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z.shape</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>.T</code> to get the transpose.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z.T</span><br></pre></td></tr></table></figure>
+<p><br><br>The number of rows has swapped with the number of columns.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z.T.shape</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>.dtype</code> to see the data type of the elements in the array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z.dtype</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>.astype</code> to cast to a specific type.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = z.astype(<span class="string">'f'</span>)</span><br><span class="line">z.dtype</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Math-Functions"><a href="#Math-Functions" class="headerlink" title="Math Functions"></a>Math Functions</h2><p>Numpy has many built in math functions that can be performed on arrays.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">-4</span>, <span class="number">-2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.sum()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.max()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.min()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.mean()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.std()</span><br></pre></td></tr></table></figure>
+<p><br><br><code>argmax</code> and <code>argmin</code> return the index of the maximum and minimum values in the array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.argmax()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.argmin()</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Indexing-Slicing"><a href="#Indexing-Slicing" class="headerlink" title="Indexing / Slicing"></a>Indexing / Slicing</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = np.arange(<span class="number">13</span>)**<span class="number">2</span></span><br><span class="line">s</span><br></pre></td></tr></table></figure>
+<p><br><br>Use bracket notation to get the value at a specific index. Remember that indexing starts at 0.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s[<span class="number">0</span>], s[<span class="number">4</span>], s[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>:</code> to indicate a range. <code>array[start:stop]</code></p>
+<p>Leaving <code>start</code> or <code>stop</code> empty will default to the beginning/end of the array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s[<span class="number">1</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>Use negatives to count from the back.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s[<span class="number">-4</span>:]</span><br></pre></td></tr></table></figure>
+<p><br><br>A second <code>:</code> can be used to indicate step-size. <code>array[start:stop:stepsize]</code></p>
+<p>Here we are starting 5th element from the end, and counting backwards by 2 until the beginning of the array is reached.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s[<span class="number">-5</span>::<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>Let’s look at a multidimensional array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r = np.arange(<span class="number">36</span>)</span><br><span class="line">r.resize((<span class="number">6</span>, <span class="number">6</span>))</span><br><span class="line">r</span><br></pre></td></tr></table></figure>
+<p><br><br>Use bracket notation to slice: <code>array[row, column]</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r[<span class="number">2</span>, <span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>And use : to select a range of rows or columns</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r[<span class="number">3</span>, <span class="number">3</span>:<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>Here we are selecting all the rows up to (and not including) row 2, and all the columns up to (and not including) the last column.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r[:<span class="number">2</span>, :<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>This is a slice of the last row, and only every other element.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r[<span class="number">-1</span>, ::<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>We can also perform conditional indexing. Here we are selecting values from the array that are greater than 30. (Also see <code>np.where</code>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r[r &gt; <span class="number">30</span>]</span><br></pre></td></tr></table></figure>
+<p><br><br>Here we are assigning all values in the array that are greater than 30 to the value of 30.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r[r &gt; <span class="number">30</span>] = <span class="number">30</span></span><br><span class="line">r</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Copying-Data"><a href="#Copying-Data" class="headerlink" title="Copying Data"></a>Copying Data</h2><p>Be careful with copying and modifying arrays in NumPy!</p>
+<p><code>r2</code> is a slice of <code>r</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r2 = r[:<span class="number">3</span>,:<span class="number">3</span>]</span><br><span class="line">r2</span><br></pre></td></tr></table></figure>
+<p><br><br>Set this slice’s values to zero ([:] selects the entire array)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r2[:] = <span class="number">0</span></span><br><span class="line">r2</span><br></pre></td></tr></table></figure>
+<p><br><br><code>r</code> has also been changed!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r</span><br></pre></td></tr></table></figure>
+<p><br><br>To avoid this, use <code>r.copy</code> to create a copy that will not affect the original array</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r_copy = r.copy()</span><br><span class="line">r_copy</span><br></pre></td></tr></table></figure>
+<p><br><br>Now when r_copy is modified, r will not be changed.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r_copy[:] = <span class="number">10</span></span><br><span class="line">print(r_copy, <span class="string">'\n'</span>)</span><br><span class="line">print(r)</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Iterating-Over-Arrays"><a href="#Iterating-Over-Arrays" class="headerlink" title="Iterating Over Arrays"></a>Iterating Over Arrays</h3><p>Let’s create a new 4 by 3 array of random numbers 0-9.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test = np.random.randint(<span class="number">0</span>, <span class="number">10</span>, (<span class="number">4</span>,<span class="number">3</span>))</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
+<p><br><br>Iterate by row:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> test:</span><br><span class="line">    print(row)</span><br></pre></td></tr></table></figure>
+<p><br><br>Iterate by index:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(test)):</span><br><span class="line">    print(test[i])</span><br></pre></td></tr></table></figure>
+<p><br><br>Iterate by row and index:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, row <span class="keyword">in</span> enumerate(test):</span><br><span class="line">    print(<span class="string">'row'</span>, i, <span class="string">'is'</span>, row)</span><br></pre></td></tr></table></figure>
+<p><br><br>Use <code>zip</code> to iterate over multiple iterables.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test2 = test**<span class="number">2</span></span><br><span class="line">test2</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> zip(test, test2):</span><br><span class="line">    print(i,<span class="string">'+'</span>,j,<span class="string">'='</span>,i+j)</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/005Xp8yUly1fysbcjur4tj31hc0u0qc9" alt="end"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Coursera/" rel="tag"><i class="fa fa-tag"></i> Coursera</a>
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/30/new-article/" rel="next" title="Test Blog">
+                <i class="fa fa-chevron-left"></i> Test Blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="John">
+            
+              <p class="site-author-name" itemprop="name">John</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/fengxuli" title="GitHub &rarr; https://github.com/fengxuli" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:fengxu.li@jhu.edu" title="Email &rarr; mailto:fengxu.li@jhu.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.linkedin.com/in/fengxuli" title="LinkedIn &rarr; https://www.linkedin.com/in/fengxuli" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-Functions"><span class="nav-number">1.</span> <span class="nav-text">The Python Programming Language: Functions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-Types-and-Sequences"><span class="nav-number">2.</span> <span class="nav-text">The Python Programming Language: Types and Sequences</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-More-on-Strings"><span class="nav-number">3.</span> <span class="nav-text">The Python Programming Language: More on Strings</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reading-and-Writing-CSV-files"><span class="nav-number">4.</span> <span class="nav-text">Reading and Writing CSV files</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-Dates-and-Times"><span class="nav-number">5.</span> <span class="nav-text">The Python Programming Language: Dates and Times</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-Objects-and-map"><span class="nav-number">6.</span> <span class="nav-text">The Python Programming Language: Objects and map()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-Lambda-and-List-Comprehensions"><span class="nav-number">7.</span> <span class="nav-text">The Python Programming Language: Lambda and List Comprehensions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Python-Programming-Language-Numerical-Python-NumPy"><span class="nav-number">8.</span> <span class="nav-text">The Python Programming Language: Numerical Python (NumPy)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-Arrays"><span class="nav-number">8.1.</span> <span class="nav-text">Creating Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Combining-Arrays"><span class="nav-number">8.1.0.1.</span> <span class="nav-text">Combining Arrays</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Operations"><span class="nav-number">8.2.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math-Functions"><span class="nav-number">8.3.</span> <span class="nav-text">Math Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Indexing-Slicing"><span class="nav-number">8.4.</span> <span class="nav-text">Indexing / Slicing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Copying-Data"><span class="nav-number">8.5.</span> <span class="nav-text">Copying Data</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterating-Over-Arrays"><span class="nav-number">8.5.1.</span> <span class="nav-text">Iterating Over Arrays</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John</span>
+
+  
+
+  
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">Site words total count:2.6k</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "RIbGuoKGv0KhCr5HHDeumVMn-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "RIbGuoKGv0KhCr5HHDeumVMn-gzGzoHsz",
+                'X-LC-Key': "u6xg4dhrlVfklwNsxGJ5XLG1",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script type="text/javascript" color="140,140,140" opacity="0.9" zindex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+  
+</body>
+</html>
