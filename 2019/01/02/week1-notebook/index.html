@@ -480,7 +480,7 @@
 <pre><code>list
 </code></pre><p><br><br>Use <code>append</code> to append an object to a list.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x.append(<span class="number">3.3</span>)</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
-<pre><code>[1, &#39;a&#39;, 2, &#39;b&#39;, 3.3]
+<pre><code>[1, &apos;a&apos;, 2, &apos;b&apos;, 3.3]
 </code></pre><p><br><br>This is an example of how to loop through each item in the list.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> x:</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
 <pre><code>1
@@ -511,13 +511,13 @@ T
 Th
 </code></pre><p><br><br>This will return the last element of the string.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>&#39;g&#39;
+<pre><code>&apos;g&apos;
 </code></pre><p><br><br>This will return the slice starting from the 4th element from the end and stopping before the 2nd element from the end.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">-4</span>:<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>&#39;ri&#39;
+<pre><code>&apos;ri&apos;
 </code></pre><p><br><br>This is a slice from the beginning of the string and stopping before the 3rd element.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>&#39;Thi&#39;
+<pre><code>&apos;Thi&apos;
 </code></pre><p><br><br>And this is a slice starting from the 4th element of the string and going all the way to the end.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">firstname = <span class="string">'Christopher'</span></span><br><span class="line">lastname = <span class="string">'Brooks'</span></span><br><span class="line"></span><br><span class="line">print(firstname + <span class="string">' '</span> + lastname)</span><br><span class="line">print(firstname*<span class="number">3</span>)</span><br><span class="line">print(<span class="string">'Chris'</span> <span class="keyword">in</span> firstname)</span><br></pre></td></tr></table></figure>
 <pre><code>Christopher Brooks
@@ -534,15 +534,15 @@ Brooks
 TypeError                                 Traceback (most recent call last)
 
 &lt;ipython-input-25-1623ac76de6e&gt; in &lt;module&gt;()
-----&gt; 1 &#39;Chris&#39; + 2
+----&gt; 1 &apos;Chris&apos; + 2
 
 
 TypeError: must be str, not int
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Chris'</span> + str(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>&#39;Chris2&#39;
+<pre><code>&apos;Chris2&apos;
 </code></pre><p><br><br>Dictionaries associate keys with values.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = &#123;<span class="string">'Christopher Brooks'</span>: <span class="string">'brooksch@umich.edu'</span>, <span class="string">'Bill Gates'</span>: <span class="string">'billg@microsoft.com'</span>&#125;</span><br><span class="line">x[<span class="string">'Christopher Brooks'</span>] <span class="comment"># Retrieve a value by using the indexing operator</span></span><br></pre></td></tr></table></figure>
-<pre><code>&#39;brooksch@umich.edu&#39;
+<pre><code>&apos;brooksch@umich.edu&apos;
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="string">'Kevyn Collins-Thompson'</span>] = <span class="keyword">None</span></span><br><span class="line">x[<span class="string">'Kevyn Collins-Thompson'</span>]</span><br></pre></td></tr></table></figure>
 <p><br><br>Iterate over all of the keys:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> x:</span><br><span class="line">    print(x[name])</span><br></pre></td></tr></table></figure>
@@ -679,7 +679,7 @@ None
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x * y) <span class="comment"># elementwise multiplication  [1 2 3] * [4 5 6] = [4  10  18]</span></span><br><span class="line">print(x / y) <span class="comment"># elementwise divison         [1 2 3] / [4 5 6] = [0.25  0.4  0.5]</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x**<span class="number">2</span>) <span class="comment"># elementwise power  [1 2 3] ^2 =  [1 4 9]</span></span><br></pre></td></tr></table></figure>
 <p><br><br><strong>Dot Product:</strong>  </p>
-<p>$ \begin{bmatrix}x_1 \ x_2 \ x_3\end{bmatrix}<br>\cdot<br>\begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix}<br>= x_1 y_1 + x_2 y_2 + x_3 y_3$</p>
+<p>$ \begin{bmatrix}x_1 \ x_2 \ x_3\end{bmatrix}<br>\cdot<br>\begin{bmatrix}y_1 \ y_2 \ y_3\end{bmatrix}<br>= x_1 y_1 + x_2 y_2 + x_3 y_3$</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.dot(y) <span class="comment"># dot product  1*4 + 2*5 + 3*6</span></span><br></pre></td></tr></table></figure>
 <pre><code>---------------------------------------------------------------------------
 
@@ -689,7 +689,7 @@ NameError                                 Traceback (most recent call last)
 ----&gt; 1 x.dot(y) # dot product  1*4 + 2*5 + 3*6
 
 
-NameError: name &#39;x&#39; is not defined
+NameError: name &apos;x&apos; is not defined
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = np.array([y, y**<span class="number">2</span>])</span><br><span class="line">print(len(z)) <span class="comment"># number of rows of array</span></span><br></pre></td></tr></table></figure>
 <p><br><br>Let’s look at transposing arrays. Transposing permutes the dimensions of the array.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = np.array([y, y**<span class="number">2</span>])</span><br><span class="line">z</span><br></pre></td></tr></table></figure>
